@@ -9,6 +9,30 @@ int loop;
 
 while (true)
 {
+    Console.Write("Inserisci un Numero di righe 0ppure un valore diverso da un intero se vuoi fare terminare il loop:");
+
+    string input = Console.ReadLine();
+
+    try
+    {
+        loop = Convert.ToInt32(input);
+
+        for (int i = 0; i <= loop; i++)
+        {
+            for (int e = 1; e <= i; e++)
+            {
+                Console.Write("* ");
+            }
+            //tiene conto di ogni riga che va a capo
+            Console.Write("\n");
+        }
+    }
+    catch (System.Exception)
+    {
+        Console.WriteLine("Loop terminato");
+        break;
+
+    }
 
 }
 
